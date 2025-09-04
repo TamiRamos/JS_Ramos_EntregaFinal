@@ -1,0 +1,25 @@
+{
+  "name": "js.entegafinal_ramos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TamiRamos/JS_Ramos_EntregaFinal.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TamiRamos/JS_Ramos_EntregaFinal/issues"
+  },
+  "homepage": "https://github.com/TamiRamos/JS_Ramos_EntregaFinal#readme",
+  "dependencies": {
+    "aos": "^2.3.4",
+    "bootstrap": "^5.3.8",
+    "luxon": "^3.7.1"
+  }
+}
