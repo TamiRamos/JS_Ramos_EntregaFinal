@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Recuperar contraseña</title>
+  
+  <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+  <h2>Recuperar contraseña</h2>
+  <p class="hint">Ingresá tu email y te enviaremos un enlace para restablecer la contraseña.</p>
+
+  <form id="recuperarForm" novalidate>
+    <label for="email">Email:</label>
+    <input id="email" type="email" required placeholder="tu@email.com">
+    <div id="errorEmail" class="error-msg">Ingresá un email válido</div>
+
+    <div class="actions">
+      <button type="submit" id="sendBtn">Enviar enlace de recuperación</button>
+      <button type="button" id="backBtn">Volver al login</button>
+    </div>
+  </form>
+
+  <script src="JS/recuperar.js"></script>
+</body>
+</html>

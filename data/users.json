@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "usuario": "admin",
+    "email": "admin@ambarnails.com",
+    "password": "1234"
+  },
+  {
+    "id": 2,
+    "usuario": "ambar",
+    "email": "ambar@ambarnails.com",
+    "password": "5678"
+  }
+]

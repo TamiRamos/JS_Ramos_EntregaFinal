@@ -1,0 +1,228 @@
+/* -------------------------
+   Estilos generales
+---------------------------*/
+body {
+  font-family: Arial, sans-serif;
+  background: #f2f2f2;
+  margin: 0;
+  padding: 0;
+}
+
+/* -------------------------
+   Login
+---------------------------*/
+.login-container {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  width: 320px;
+  text-align: center;
+  margin: 40px auto;
+}
+
+.logo {
+  width: 100px;
+  margin-bottom: 15px;
+}
+
+h2 {
+  margin-bottom: 12px;
+  color: #333;
+}
+
+label {
+  display: block;
+  margin-top: 12px;
+  text-align: left;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+button {
+  width: 100%;
+  margin-top: 12px;
+  padding: 10px;
+  background: #d63384;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #b82e6d;
+  opacity: 0.9;
+}
+
+.forgot {
+  margin-top: 15px;
+}
+
+.forgot a {
+  color: #d63384;
+  text-decoration: none;
+}
+
+.error-msg {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 5px;
+  display: none;
+}
+
+.small-link {
+  font-size: 0.9rem;
+  margin-top: 12px;
+  display: inline-block;
+  text-decoration: underline;
+  color: #0077cc;
+  cursor: pointer;
+}
+
+.hint {
+  font-size: 0.9rem;
+  margin-top: 10px;
+  color: #555;
+}
+
+.actions {
+  margin-top: 14px;
+}
+
+/* -------------------------
+   Contenedores header
+---------------------------*/
+.container_header {
+  display: flex;
+  text-align: center;
+  margin: auto;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* -------------------------
+   Principal.html
+---------------------------*/
+.header-principal {
+  background-color: #d63384;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.header-principal .logo {
+  width: 80px;
+  display: block;
+  margin: 0 auto 10px;
+}
+
+.main-principal {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.info-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.info-cards .card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  flex: 1 1 250px;
+  min-width: 250px;
+  text-align: center;
+}
+
+.info-cards .card h2 {
+  margin-top: 0;
+  color: #d63384;
+}
+
+.info-cards .card ul {
+  padding-left: 20px;
+  text-align: left;
+}
+
+.actions-principal {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.actions-principal .btn-back {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #d63384;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.actions-principal .btn-back:hover {
+  background-color: #b82e6d;
+}
+
+.footer-principal {
+  text-align: center;
+  background: #333;
+  color: white;
+  padding: 15px 0;
+  font-size: 0.9rem;
+  margin-top: 30px;
+}
+
+/* -------------------------
+   Responsive
+---------------------------*/
+@media (max-width: 768px) {
+  .login-container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .info-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info-cards .card {
+    width: 90%;
+  }
+
+  .main-principal {
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-container {
+    padding: 15px;
+  }
+
+  .info-cards .card {
+    padding: 15px;
+  }
+
+  .actions-principal .btn-back {
+    width: 100%;
+    padding: 12px;
+  }
+}
