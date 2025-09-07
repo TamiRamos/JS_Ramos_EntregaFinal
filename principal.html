@@ -1,47 +1,67 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Banco Matrix - Principal</title>
-  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="stylesheet" href="CSS/style.css" />
 </head>
 <body>
   <header class="header-principal">
     <div class="container_header">
       <img src="img/LOGO_BM.png" alt="Banco Matrix" class="logo">
-      <h1>Bienvenido a Banco Matrix</h1>
+      <h1 id="header-welcome">Bienvenido a Banco Matrix</h1>
+      <p id="header-user" style="margin:6px 0 0 0; font-weight:600;"></p>
     </div>
   </header>
 
   <main class="main-principal">
-    <section class="info-cards">
-      <div class="card">
-        <h2>Saldo actual</h2>
-        <p>$25,000</p>
-      </div>
-      <div class="card">
-        <h2>Últimos movimientos</h2>
-        <ul>
-          <li>Depósito: $5,000 - 05/09/2025</li>
-          <li>Pago tarjeta: $3,200 - 04/09/2025</li>
-          <li>Transferencia: $1,000 - 03/09/2025</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h2>Transferencias</h2>
-        <p>Realiza transferencias a tus cuentas y terceros de manera segura.</p>
+    <!-- Contenedor dinámico que llenará principal.js -->
+    <section class="info-cards" id="infoCardsContainer">
+      <!-- Cards generadas desde JS -->
+    </section>
+
+    <!-- Formulario de transferencia -->
+    <section class="transfer-section" style="max-width:900px; margin: 0 auto 20px; padding: 0 20px;">
+      <div class="card" style="text-align:left;">
+        <h2>Realizar transferencia</h2>
+        <form id="transferForm">
+          <label for="toUsuario">A usuario (destino)</label>
+          <input type="text" id="toUsuario" placeholder="usuario destino" required>
+
+          <label for="amount">Monto</label>
+          <input type="number" id="amount" placeholder="Ej: 1500" min="1" required>
+
+          <label for="detail">Detalle (opcional)</label>
+          <input type="text" id="detail" placeholder="Descripción">
+
+          <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
+            <button type="submit" id="transferBtn">Enviar transferencia</button>
+            <button type="button" id="refreshBtn" style="background:#0077cc;">Refrescar datos</button>
+            <a href="index.html" id="logoutBtn" class="btn-back" style="margin-left:auto;">Cerrar sesión</a>
+          </div>
+        </form>
+        <small id="transferError" style="color:red; display:none;"></small>
       </div>
     </section>
 
-    <div class="actions">
-      <a href="index.html" class="btn-back">Cerrar sesión</a>
-    </div>
+    <!-- Historial -->
+    <section class="movements-section" style="max-width:900px; margin: 0 auto 40px; padding: 0 20px;">
+      <div class="card">
+        <h2>Historial de movimientos</h2>
+        <ul id="movementsList" style="list-style:none; padding-left:0; margin:0;"></ul>
+      </div>
+    </section>
   </main>
 
   <footer class="footer-principal">
     <p>&copy; 2025 Banco Matrix. Todos los derechos reservados.</p>
     <p>Contacto: soporte@bancomatrix.com | Tel: +54 11 1234-5678</p>
   </footer>
+
+  <!-- SweetAlert (asegurate de tenerlo) -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <!-- Script principal de la página -->
+  <script src="JS/principal.js"></script>
 </body>
 </html>
